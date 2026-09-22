@@ -1,0 +1,27 @@
+# membuat function
+def hitung_biaya(jenis_kendaraan, durasi):
+    if jenis_kendaraan == "mobil":
+        tarif = 5000
+    elif jenis_kendaraan == "motor":
+        tarif = 3000
+    else:
+        print("not defined")
+
+    total = tarif * durasi
+    return total
+
+jenis_kendaraan = input("Masukkan jenis kendaraan (mobil/motor): ")
+jam_masuk = float(input("Masukkan jam masuk: "))
+jam_keluar = float(input("Masukkan jam keluar: "))
+durasi = jam_keluar - jam_masuk
+
+total = hitung_biaya(jenis_kendaraan, durasi)
+
+print("=================================")
+print("jenis kendaraan: ", jenis_kendaraan)
+print("jam masuk: ", jam_masuk)
+print("jam keluar: ", jam_keluar)
+print("lama parkir: ", durasi ,"jam")
+print("total biaya parkir: Rp", total)
+print("=================================")
+
